@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?><!--
+    Copyright (c) 2010 David Castellanos Serrano and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        David Castellanos Serrano - initial API and implementation
+ -->
+
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.uclm.louisse.eap.explorer.EapExplorerApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="EapPerspective"
+            class="org.uclm.louisse.eap.explorer.ui.EapPerspective"
+            id="org.uclm.louisse.eap.explorer.ui.EapPerspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="EAP Model"
+            class="org.uclm.louisse.eap.explorer.ui.views.ModelView"
+            id="org.uclm.louisse.eap.explorer.ui.views.ModelView">
+      </view>
+      <view
+            class="org.uclm.louisse.eap.explorer.ui.views.ObjectDetailsView"
+            id="org.uclm.louisse.eap.explorer.ui.views.ObjectDetailsView"
+            name="Object Details"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               id="org.uclm.louisse.eap.explorer.ui.views.ModelView"
+               minimized="false"
+               ratio="0.3"
+               relationship="left"
+               relative="org.eclipse.ui.editorss"
+               standalone="true">
+         </view>
+         <view
+               id="org.uclm.louisse.eap.explorer.ui.views.ObjectDetailsView"
+               minimized="false"
+               relationship="right"
+               relative="org.eclipse.ui.editorss"
+               standalone="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="org.uclm.louisse.eap.explorer.Open"
+                  label="Open">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit">
+            </command>
+         </menu>
+         <menu
+               label="View">
+         </menu>
+         <!--
+         <menu
+               label="Help">
+            <command
+                  commandId="org.uclm.louisse.eap.explorer.About"
+                  label="About"
+                  style="push">
+            </command>
+         </menu>
+         -->
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.uclm.louisse.eap.explorer.commands.OpenHandler"
+            id="org.uclm.louisse.eap.explorer.Open"
+            name="Open">
+      </command>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.uclm.louisse.eap.explorer.application"
+            name="EAP Model Explorer">
+         <property
+               name="appName"
+               value="EAP Model Explorer">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

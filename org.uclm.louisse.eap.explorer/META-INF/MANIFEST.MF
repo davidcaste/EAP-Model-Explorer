@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EAP Model Explorer
+Bundle-SymbolicName: org.uclm.louisse.eap.explorer;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: org.uclm.louisse.eap.explorer.EapExplorerPlugin
+Bundle-Vendor: UCLM
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: eaapi.jar,
+ .

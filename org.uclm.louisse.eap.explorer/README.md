@@ -35,7 +35,7 @@ Special thanks
 [components4oaw](http://components4oaw.sourceforge.net/) project for its
 patience.
 - Most of the icons comes from
-[Eclipse Modeling Project](http://www.eclipse.org/modeling/)
+[Eclipse Modeling Project](http://www.eclipse.org/modeling/).
 - The rest of the icons are from [Papyrus UML](http://www.papyrusuml.org)
 project.
 
@@ -51,7 +51,7 @@ License
 -------
 
 This program is provided under an EPL open source license, read the
-[LICENSE](LICENSE) file for details.
+[LICENSE](org.uclm.louisse.eap.explorer/LICENSE) file for details.
 
 
 Copyright

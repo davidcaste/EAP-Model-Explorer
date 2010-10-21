@@ -54,6 +54,7 @@ public class EapExplorerPlugin extends AbstractUIPlugin {
 	public static final String IMG_COMPONENT = "Component";
 	public static final String IMG_COLLABORATION = "Collaboration";
 	public static final String IMG_INTERACTION = "Interaction";
+	public static final String IMG_INTERACTION_USE = "InteractionUse";
 	public static final String IMG_LIFELINE = "Lifeline";
 	public static final String IMG_CONTROLFLOW = "ControlFlow";
 	public static final String IMG_COMBINEDFRAGMENT = "CombinedFragment";
@@ -85,6 +86,7 @@ public class EapExplorerPlugin extends AbstractUIPlugin {
 		registerImage(registry, IMG_INSTANCE_SPECIFICATION, "full/obj16/InstanceSpecification.gif");
 		registerImage(registry, IMG_COLLABORATION, "full/obj16/Collaboration.gif");
 		registerImage(registry, IMG_INTERACTION, "full/obj16/Interaction.gif");
+		registerImage(registry, IMG_INTERACTION_USE, "full/obj16/InteractionUse.gif");
 		registerImage(registry, IMG_LIFELINE, "full/obj16/Lifeline.gif");
 		registerImage(registry, IMG_CONTROLFLOW, "full/obj16/ControlFlow.gif");
 		registerImage(registry, IMG_COMBINEDFRAGMENT, "full/obj16/CombinedFragment.gif");

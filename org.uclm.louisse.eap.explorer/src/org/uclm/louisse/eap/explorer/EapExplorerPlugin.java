@@ -58,6 +58,7 @@ public class EapExplorerPlugin extends AbstractUIPlugin {
 	public static final String IMG_LIFELINE = "Lifeline";
 	public static final String IMG_CONTROLFLOW = "ControlFlow";
 	public static final String IMG_COMBINEDFRAGMENT = "CombinedFragment";
+	public static final String IMG_USECASE = "UseCase";
 	
 	/**
 	 * The constructor
@@ -90,6 +91,7 @@ public class EapExplorerPlugin extends AbstractUIPlugin {
 		registerImage(registry, IMG_LIFELINE, "full/obj16/Lifeline.gif");
 		registerImage(registry, IMG_CONTROLFLOW, "full/obj16/ControlFlow.gif");
 		registerImage(registry, IMG_COMBINEDFRAGMENT, "full/obj16/CombinedFragment.gif");
+		registerImage(registry, IMG_USECASE, "full/obj16/UseCase.gif");
 	}
 	
 	/*

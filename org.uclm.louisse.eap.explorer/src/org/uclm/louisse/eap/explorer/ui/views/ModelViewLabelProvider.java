@@ -183,6 +183,8 @@ public class ModelViewLabelProvider extends LabelProvider implements ILabelProvi
 				return plugin.getImage(EapExplorerPlugin.IMG_LIFELINE);
 			} else if(element1.GetType().equals("InteractionFragment")) {
 				return plugin.getImage(EapExplorerPlugin.IMG_COMBINEDFRAGMENT);
+			} else if(element1.GetType().equals("UseCase")) {
+				return plugin.getImage(EapExplorerPlugin.IMG_USECASE);
 			}
 			return sImages.getImage(ISharedImages.IMG_OBJ_FILE);
 		}

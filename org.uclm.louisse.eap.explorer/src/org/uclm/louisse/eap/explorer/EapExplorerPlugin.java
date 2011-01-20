@@ -59,6 +59,10 @@ public class EapExplorerPlugin extends AbstractUIPlugin {
 	public static final String IMG_CONTROLFLOW = "ControlFlow";
 	public static final String IMG_COMBINEDFRAGMENT = "CombinedFragment";
 	public static final String IMG_USECASE = "UseCase";
+	public static final String IMG_COMMENT = "Comment";
+	public static final String IMG_DATATYPE = "DataType";
+	public static final String IMG_ENUMERATION = "Enumeration";
+	public static final String IMG_ENUMERATIONLITERAL = "EnumerationLiteral";
 	
 	/**
 	 * The constructor
@@ -92,6 +96,10 @@ public class EapExplorerPlugin extends AbstractUIPlugin {
 		registerImage(registry, IMG_CONTROLFLOW, "full/obj16/ControlFlow.gif");
 		registerImage(registry, IMG_COMBINEDFRAGMENT, "full/obj16/CombinedFragment.gif");
 		registerImage(registry, IMG_USECASE, "full/obj16/UseCase.gif");
+		registerImage(registry, IMG_COMMENT, "full/obj16/Comment.gif");
+		registerImage(registry, IMG_DATATYPE, "full/obj16/DataType.gif");
+		registerImage(registry, IMG_ENUMERATION, "full/obj16/Enumeration.gif");
+		registerImage(registry, IMG_ENUMERATIONLITERAL, "full/obj16/EnumerationLiteral.gif");
 	}
 	
 	/*

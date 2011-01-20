@@ -165,10 +165,13 @@ public class ModelViewLabelProvider extends LabelProvider implements ILabelProvi
 		}
 		if(element instanceof Element) {
 			Element element1 = (Element) element;
-			if(element1.GetType().equals("Component")) {
-				return plugin.getImage(EapExplorerPlugin.IMG_COMPONENT);
-			} else if(element1.GetType().equals("Class")) {
+			if(element1.GetType().equals("Class")) {
+				if(element1.GetStereotype().equals("enumeration")) {
+					return plugin.getImage(EapExplorerPlugin.IMG_ENUMERATION);
+				}
 				return plugin.getImage(EapExplorerPlugin.IMG_CLASS);
+			} else if(element1.GetType().equals("Component")) {
+				return plugin.getImage(EapExplorerPlugin.IMG_COMPONENT);
 			}  else if(element1.GetType().equals("Interface")) {
 				return plugin.getImage(EapExplorerPlugin.IMG_INTERFACE);
 			} else if(element1.GetType().equals("Object")) {
@@ -185,6 +188,10 @@ public class ModelViewLabelProvider extends LabelProvider implements ILabelProvi
 				return plugin.getImage(EapExplorerPlugin.IMG_COMBINEDFRAGMENT);
 			} else if(element1.GetType().equals("UseCase")) {
 				return plugin.getImage(EapExplorerPlugin.IMG_USECASE);
+			} else if(element1.GetType().equals("Note")) {
+				return plugin.getImage(EapExplorerPlugin.IMG_COMMENT);
+			} else if(element1.GetType().equals("DataType")) {
+				return plugin.getImage(EapExplorerPlugin.IMG_DATATYPE);
 			}
 			return sImages.getImage(ISharedImages.IMG_OBJ_FILE);
 		}
@@ -200,7 +207,9 @@ public class ModelViewLabelProvider extends LabelProvider implements ILabelProvi
 		}
 		if(element instanceof Attribute) {
 			Attribute attribute = (Attribute) element;
-			if(attribute.GetVisibility().equalsIgnoreCase("Public")) {
+			if(attribute.GetStereotype().equals("enum")) {
+				return plugin.getImage(EapExplorerPlugin.IMG_ENUMERATIONLITERAL);
+			} else if(attribute.GetVisibility().equalsIgnoreCase("Public")) {
 				return plugin.getImage(EapExplorerPlugin.IMG_PUBLIC);
 			} else if(attribute.GetVisibility().equalsIgnoreCase("Private")) {
 				return plugin.getImage(EapExplorerPlugin.IMG_PRIVATE);
